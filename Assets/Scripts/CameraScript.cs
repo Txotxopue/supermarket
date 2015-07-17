@@ -24,7 +24,9 @@ public class CameraScript : MonoBehaviour
 
 	public void OnTravelFinished ()
 	{
-		m_PlayerCameraComponent.enabled = true;
+		m_CameraComponent.tag = "Untagged";
 		m_CameraComponent.enabled = false;
+		m_PlayerCameraComponent.enabled = true;
+		m_PlayerCameraComponent.tag = "MainCamera";
 	}
 }
