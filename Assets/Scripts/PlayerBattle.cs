@@ -27,9 +27,9 @@ public struct Attack
 [System.Serializable]
 public class PlayerBattle : MonoBehaviour 
 {
-	public int mMaxHp;
-	public int mCurrentHp;
-	public Attack[] attackList;
+	public int m_MaxHp;
+	public int m_CurrentHp;
+	public Attack[] m_AttackList;
 
 
 	// Use this for initialization
@@ -62,7 +62,7 @@ public class PlayerBattle : MonoBehaviour
 
 	public Attack GetAttack (string pId)
 	{
-		foreach (Attack attack in attackList)
+		foreach (Attack attack in m_AttackList)
 		{
 			if (attack.id == pId)
 			{
@@ -75,20 +75,20 @@ public class PlayerBattle : MonoBehaviour
 
 	public void TakeDamage (int pAmount)
 	{
-		mCurrentHp -= pAmount;
-		if (mCurrentHp <= 0)
+		m_CurrentHp -= pAmount;
+		if (m_CurrentHp <= 0)
 		{
-			mCurrentHp = 0;
+			m_CurrentHp = 0;
 		}
 	}
 
 
 	public void HealDamage (int pAmount)
 	{
-		mCurrentHp += pAmount;
-		if (mCurrentHp > mMaxHp)
+		m_CurrentHp += pAmount;
+		if (m_CurrentHp > m_MaxHp)
 		{
-			mCurrentHp = mMaxHp;
+			m_CurrentHp = m_MaxHp;
 		}
 	}
 

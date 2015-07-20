@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: b15db54f83a6730438ebd5031a0d6dd4, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -138,7 +138,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -371,7 +371,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -379,9 +379,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Attack A
-
-'
+  m_Text: Attack A
 --- !u!222 &431735792
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -417,9 +415,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1c35e0c722ec2a43b9d72bacb172ed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMaxHp: 0
-  mCurrentHp: 0
-  attackList:
+  m_MaxHp: 20
+  m_CurrentHp: 20
+  m_AttackList:
   - id: A
     type: 0
     amount: 10
@@ -427,6 +425,9 @@ MonoBehaviour:
     type: 0
     amount: 20
   - id: C
+    type: 0
+    amount: 30
+  - id: D
     type: 1
     amount: 10
 --- !u!4 &473670934
@@ -496,7 +497,7 @@ GameObject:
   - 114: {fileID: 877615218}
   - 114: {fileID: 877615217}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Button B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -552,6 +553,17 @@ MonoBehaviour:
           m_StringArgument: B
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1072411426}
+        m_MethodName: ActivateBattleTime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &877615218
@@ -594,11 +606,60 @@ RectTransform:
   - {fileID: 23366892}
   m_Father: {fileID: 263339525}
   m_RootOrder: 1
-  m_AnchorMin: {x: .5, y: 0}
-  m_AnchorMax: {x: .5, y: 0}
-  m_AnchoredPosition: {x: -.00122070312, y: 93.4000015}
-  m_SizeDelta: {x: 136, y: 30}
+  m_AnchorMin: {x: .349999994, y: .0299999993}
+  m_AnchorMax: {x: .495000005, y: .129999995}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
+--- !u!1 &1072411424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1072411425}
+  - 114: {fileID: 1072411426}
+  m_Layer: 0
+  m_Name: BattleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1072411425
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1072411424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+--- !u!114 &1072411426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1072411424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba0cc867713e57b46bcbd768c2490485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BattleTimeActive: 0
+  m_BattleTime: 0
+  m_PlayerTime: 0
+  m_EnemyTime: 0
+  m_PlayerReady: 0
+  m_EnemyReady: 0
+  m_PlayerCooldownTime: 5
+  m_EnemyCooldownTime: 8
+  m_Player: {fileID: 473670932}
+  m_Enemy: {fileID: 1204092235}
 --- !u!1 &1077930161
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +672,7 @@ GameObject:
   - 114: {fileID: 1077930164}
   - 114: {fileID: 1077930163}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Button D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -630,10 +691,10 @@ RectTransform:
   - {fileID: 1339834071}
   m_Father: {fileID: 263339525}
   m_RootOrder: 3
-  m_AnchorMin: {x: .5, y: 0}
-  m_AnchorMax: {x: .5, y: 0}
-  m_AnchoredPosition: {x: 160.100006, y: 50.3999939}
-  m_SizeDelta: {x: 136, y: 30}
+  m_AnchorMin: {x: .504999995, y: .0299999993}
+  m_AnchorMax: {x: .649999976, y: .129999995}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1077930163
 MonoBehaviour:
@@ -685,6 +746,17 @@ MonoBehaviour:
           m_StringArgument: D
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1072411426}
+        m_MethodName: ActivateBattleTime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1077930164
@@ -725,7 +797,7 @@ GameObject:
   - 212: {fileID: 1204092237}
   - 95: {fileID: 1204092236}
   m_Layer: 0
-  m_Name: Gordi
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -837,7 +909,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -864,7 +936,7 @@ GameObject:
   - 114: {fileID: 1467581557}
   - 114: {fileID: 1467581556}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -883,10 +955,10 @@ RectTransform:
   - {fileID: 431735790}
   m_Father: {fileID: 263339525}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: 0}
-  m_AnchorMax: {x: .5, y: 0}
-  m_AnchoredPosition: {x: -.00122070312, y: 133.399994}
-  m_SizeDelta: {x: 136, y: 30}
+  m_AnchorMin: {x: .349999994, y: .150000006}
+  m_AnchorMax: {x: .495000005, y: .25}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1467581556
 MonoBehaviour:
@@ -936,6 +1008,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: A
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1072411426}
+        m_MethodName: ActivateBattleTime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1163,7 +1246,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -1190,7 +1273,7 @@ GameObject:
   - 114: {fileID: 1927236005}
   - 114: {fileID: 1927236004}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Button C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1209,10 +1292,10 @@ RectTransform:
   - {fileID: 1710151160}
   m_Father: {fileID: 263339525}
   m_RootOrder: 2
-  m_AnchorMin: {x: .5, y: 0}
-  m_AnchorMax: {x: .5, y: 0}
-  m_AnchoredPosition: {x: -.00122070312, y: 50.3999939}
-  m_SizeDelta: {x: 136, y: 30}
+  m_AnchorMin: {x: .504999995, y: .150000006}
+  m_AnchorMax: {x: .649999976, y: .25}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1927236004
 MonoBehaviour:
@@ -1262,6 +1345,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: C
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1072411426}
+        m_MethodName: ActivateBattleTime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,

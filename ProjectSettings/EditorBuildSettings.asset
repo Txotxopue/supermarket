@@ -8,6 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/title.unity
   - enabled: 1
-    path: Assets/Scenes/super.unity
+    path: Assets/Scenes/supermarket.unity
   - enabled: 1
     path: Assets/Scenes/battle.unity
