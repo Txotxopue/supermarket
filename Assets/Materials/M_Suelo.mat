@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: M_Suelo
-  m_Shader: {fileID: 4800000, guid: e4fcc6c6be7985b45aeb9f0fde219176, type: 3}
+  m_Shader: {fileID: 4800000, guid: c5df9f30398360645b87aa042dfc243d, type: 3}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -83,28 +83,35 @@ Material:
           name: _Diffusemap
         second:
           m_Texture: {fileID: 2800000, guid: 55cf1681ba68f0846999edc3fb26c097, type: 3}
-          m_Scale: {x: 50, y: 50}
+          m_Scale: {x: 10, y: 10}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _Normalmap
         second:
           m_Texture: {fileID: 2800000, guid: 3badda5ca4eca99409bc6a45dbab108f, type: 3}
-          m_Scale: {x: 50, y: 50}
+          m_Scale: {x: 10, y: 10}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _Roughnessmap
         second:
           m_Texture: {fileID: 2800000, guid: a9783ba4fae4f6741b811d43b21d2a48, type: 3}
-          m_Scale: {x: 50, y: 50}
+          m_Scale: {x: 10, y: 10}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _AOmap
         second:
           m_Texture: {fileID: 2800000, guid: aa75d47933b3c0c4b804b9c72c553a76, type: 3}
-          m_Scale: {x: 50, y: 50}
+          m_Scale: {x: 10, y: 10}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Emissivemap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 10, y: 10}
           m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
@@ -175,6 +182,10 @@ Material:
         first:
           name: _Outlinewidth
         second: 0
+      data:
+        first:
+          name: _Emissivepower
+        second: 1
     m_Colors:
       data:
         first:

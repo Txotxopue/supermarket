@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: M_Arroz
-  m_Shader: {fileID: 4800000, guid: e4fcc6c6be7985b45aeb9f0fde219176, type: 3}
+  m_Shader: {fileID: 4800000, guid: c5df9f30398360645b87aa042dfc243d, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -80,27 +80,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Diffuse
-        second:
-          m_Texture: {fileID: 2800000, guid: 1f8d798bf6a8f844e9cf78d9103598ff, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Normals
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _RoughnessMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _Diffusemap
         second:
           m_Texture: {fileID: 2800000, guid: 1f8d798bf6a8f844e9cf78d9103598ff, type: 3}
@@ -123,6 +102,34 @@ Material:
       data:
         first:
           name: _AOmap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Diffuse
+        second:
+          m_Texture: {fileID: 2800000, guid: 1f8d798bf6a8f844e9cf78d9103598ff, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normals
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _RoughnessMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Emissivemap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -178,18 +185,6 @@ Material:
         second: 0
       data:
         first:
-          name: _Bands
-        second: 4
-      data:
-        first:
-          name: _GlossMultiplier
-        second: 0
-      data:
-        first:
-          name: _Specular_Bands
-        second: 4
-      data:
-        first:
           name: _Diffusebands
         second: 4
       data:
@@ -210,12 +205,28 @@ Material:
         second: 0
       data:
         first:
+          name: _Bands
+        second: 4
+      data:
+        first:
+          name: _GlossMultiplier
+        second: 0
+      data:
+        first:
+          name: _Specular_Bands
+        second: 4
+      data:
+        first:
           name: _Gloss
         second: 1
       data:
         first:
           name: _Outline_Width
         second: .0500000007
+      data:
+        first:
+          name: _Emissivepower
+        second: 1
     m_Colors:
       data:
         first:
