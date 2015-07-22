@@ -19,6 +19,6 @@ public class Title : MonoBehaviour
 
 	public void LoadLevel()
 	{
-		Application.LoadLevel("test");
+		Application.LoadLevel(1);
 	}
 }
