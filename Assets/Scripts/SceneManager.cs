@@ -30,9 +30,5 @@ public class SceneManager : MonoBehaviour
 		{
 			Application.LoadLevel(2);
 		}
-		if (Input.GetKeyDown(KeyCode.Alpha4))
-		{
-			Application.LoadLevel(3);
-		}
 	}
 }
