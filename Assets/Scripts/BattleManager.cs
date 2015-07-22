@@ -17,9 +17,16 @@ public class BattleManager : MonoBehaviour
 	public GameObject m_Enemy;
 	public PlayerBattle m_PlayerScript;
 	public EnemyBattle m_EnemyScript;
+	private SpriteRenderer m_PlayerRenderer;
+	private SpriteRenderer m_EnemyRenderer;
+
+	public GameObject m_WinScreen;
+	public GameObject m_LoseScreen;
 
 	public Canvas m_MenuCanvas;
-	public GameObject m_EventSystem;
+	
+	private Animator m_AttackAnimator;
+	private SpriteRenderer m_SRenderer;
 
 	private Button[] m_ButtonList;
 
@@ -29,6 +36,10 @@ public class BattleManager : MonoBehaviour
 		m_PlayerScript = m_Player.GetComponent<PlayerBattle>();
 		m_EnemyScript = m_Enemy.GetComponent<EnemyBattle>();
 		m_ButtonList = m_MenuCanvas.GetComponentsInChildren<Button>();
+		m_AttackAnimator = GetComponent<Animator>();
+		m_SRenderer = GetComponent<SpriteRenderer>();
+		m_PlayerRenderer = m_Player.GetComponent<SpriteRenderer>();
+		m_EnemyRenderer = m_Enemy.GetComponent<SpriteRenderer>();
 	}
 
 	// Use this for initialization
@@ -47,7 +58,10 @@ public class BattleManager : MonoBehaviour
 	{
 		if (m_PlayerScript.m_isDead || m_EnemyScript.m_isDead)
 		{
-			EndBattle();
+			if (m_BattleTimeActive)
+			{
+				EndBattle(m_EnemyScript.m_isDead);
+			}
 		}
 		if (m_BattleTimeActive)
 		{
@@ -97,11 +111,13 @@ public class BattleManager : MonoBehaviour
 		UnreadyEnemy();
 		print ("EnemyAttack");
 		m_EnemyScript.ChooseAttack();
+		HideSprites();
 	}
 
 
 	public void ActivateBattleTime ()
 	{
+		HideSprites();
 		HideMenu();
 		UnreadyPlayer();
 		m_BattleTimeActive = true;
@@ -131,11 +147,45 @@ public class BattleManager : MonoBehaviour
 		}
 	}
 
-	public void EndBattle()
+
+	public void EndBattle( bool pWinner )
 	{
 		m_BattleTimeActive = false;
-		print ("The battle has finished");
+		if (pWinner)
+		{
+			m_WinScreen.SetActive(true);
+			print ("YOU WIN");
+		}
+		else
+		{
+			m_LoseScreen.SetActive(true);
+			print ("YOU LOSE");
+		}
+
 	}
+
+
+	public void HideSprites()
+	{
+		m_PlayerRenderer.enabled = false;
+		m_EnemyRenderer.enabled = false;
+		m_SRenderer.enabled = true;
+	}
+
+
+	public void ShowSprites()
+	{
+		m_SRenderer.enabled = false;
+		m_PlayerRenderer.enabled = true;
+		m_EnemyRenderer.enabled = true;
+	}
+
+
+	public void PlayAnimation( string pId )
+	{
+		m_AttackAnimator.Play (pId);
+	}
+	
 }
 
 

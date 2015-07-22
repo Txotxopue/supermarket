@@ -74,6 +74,8 @@ public class CharacterBattle : MonoBehaviour
 			HealDamage(attack.amount);
 			print ("Attack " + pId + " heals " + attack.amount + " damage.");
 		}
+
+		m_BattleScript.PlayAnimation(pId);
 	}
 
 
