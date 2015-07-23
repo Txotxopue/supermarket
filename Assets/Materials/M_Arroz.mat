@@ -19,7 +19,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 1f8d798bf6a8f844e9cf78d9103598ff, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -82,7 +82,7 @@ Material:
         first:
           name: _Diffusemap
         second:
-          m_Texture: {fileID: 2800000, guid: 1f8d798bf6a8f844e9cf78d9103598ff, type: 3}
+          m_Texture: {fileID: 2800000, guid: 0016afe09c4b77e4e9746f8b4244b2c7, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -102,27 +102,6 @@ Material:
       data:
         first:
           name: _AOmap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Diffuse
-        second:
-          m_Texture: {fileID: 2800000, guid: 1f8d798bf6a8f844e9cf78d9103598ff, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Normals
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _RoughnessMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -158,7 +137,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: 0
+        second: .5
       data:
         first:
           name: _BumpScale
@@ -205,26 +184,6 @@ Material:
         second: 0
       data:
         first:
-          name: _Bands
-        second: 4
-      data:
-        first:
-          name: _GlossMultiplier
-        second: 0
-      data:
-        first:
-          name: _Specular_Bands
-        second: 4
-      data:
-        first:
-          name: _Gloss
-        second: 1
-      data:
-        first:
-          name: _Outline_Width
-        second: .0500000007
-      data:
-        first:
           name: _Emissivepower
         second: 1
     m_Colors:
@@ -235,4 +194,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 0}
+        second: {r: 1, g: 1, b: 1, a: 1}

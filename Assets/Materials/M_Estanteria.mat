@@ -82,28 +82,28 @@ Material:
         first:
           name: _Diffusemap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 3b298649f882f7e4ba7936692116d923, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _Normalmap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: b668dc1dacce4d244a97863638b8cb4e, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _Roughnessmap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 4a92ac9a7adb3d7468d4679f94ce428a, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _AOmap
         second:
-          m_Texture: {fileID: 2800000, guid: 6131d3e51007de04791ff7fe55b96f97, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:

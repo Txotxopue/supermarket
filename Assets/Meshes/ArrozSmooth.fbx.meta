@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: ec1c18205b54f2a4dbdb9a422cf8f78b
-timeCreated: 1437386289
+guid: 804220880308e1846aaea4f5c50315ed
+timeCreated: 1437675428
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -70,7 +70,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   additionalBone: 0
   userData: 
   assetBundleName: 
