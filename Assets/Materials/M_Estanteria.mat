@@ -82,7 +82,7 @@ Material:
         first:
           name: _Diffusemap
         second:
-          m_Texture: {fileID: 2800000, guid: 3b298649f882f7e4ba7936692116d923, type: 3}
+          m_Texture: {fileID: 2800000, guid: 80c431210edf6234ba3e770dca164f59, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:

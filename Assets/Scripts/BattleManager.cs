@@ -30,6 +30,9 @@ public class BattleManager : MonoBehaviour
 
 	private Button[] m_ButtonList;
 
+	public GameObject m_Pastillas;
+	public GameObject m_Galleta;
+
 
 	void Awake ()
 	{
@@ -185,7 +188,18 @@ public class BattleManager : MonoBehaviour
 	{
 		m_AttackAnimator.Play (pId);
 	}
-	
+
+
+	public void ShowPastis ( )
+	{
+		Instantiate(m_Pastillas, transform.position,  Quaternion.identity);
+	}
+
+
+	public void ShowGalleta ()
+	{
+
+	}
 }
 
 

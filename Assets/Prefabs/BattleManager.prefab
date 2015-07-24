@@ -71,8 +71,9 @@ MonoBehaviour:
   m_Enemy: {fileID: 0}
   m_PlayerScript: {fileID: 0}
   m_EnemyScript: {fileID: 0}
+  m_WinScreen: {fileID: 0}
+  m_LoseScreen: {fileID: 0}
   m_MenuCanvas: {fileID: 0}
-  m_EventSystem: {fileID: 0}
 --- !u!114 &11488934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,7 +117,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 102168}
