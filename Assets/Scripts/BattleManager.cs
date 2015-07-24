@@ -198,7 +198,7 @@ public class BattleManager : MonoBehaviour
 
 	public void ShowGalleta ()
 	{
-
+		Instantiate(m_Galleta, transform.position,  Quaternion.identity);
 	}
 }
 

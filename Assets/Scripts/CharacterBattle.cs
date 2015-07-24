@@ -33,7 +33,7 @@ public class CharacterBattle : MonoBehaviour
 	public Attack[] m_AttackList;
 	protected bool m_IsPlayer = false;
 	public GameObject m_BattleManager;
-	private BattleManager m_BattleScript;
+	protected BattleManager m_BattleScript;
 
 
 	void Awake()

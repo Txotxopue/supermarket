@@ -3,10 +3,12 @@ using System.Collections;
 
 public class SceneManager : MonoBehaviour 
 {
+	public GameObject m_ViejaPrefab;
+	public GameObject m_GordoPrefab;
 
 	void Awake() 
 	{
-		DontDestroyOnLoad(transform.gameObject);
+		//DontDestroyOnLoad(transform.gameObject);
 	}
 
 	// Use this for initialization
@@ -30,5 +32,23 @@ public class SceneManager : MonoBehaviour
 		{
 			Application.LoadLevel(2);
 		}
+
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			Application.Quit();
+		}
+	}
+
+
+	public void LoadBattleScene()
+	{
+		Application.LoadLevel(2);
+	}
+
+
+	public void InstantiateSprites()
+	{
+		m_ViejaPrefab.SetActive(true);
+		m_GordoPrefab.SetActive(true);
 	}
 }

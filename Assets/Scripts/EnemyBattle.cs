@@ -22,5 +22,9 @@ public class EnemyBattle : CharacterBattle
 	{
 		int i = Random.Range(0, m_AttackList.Length);
 		Attack(m_AttackList[i].id);
+		if (m_AttackList[i].id == "Galleta")
+		{
+			m_BattleScript.ShowGalleta();
+		}
 	}
 }
