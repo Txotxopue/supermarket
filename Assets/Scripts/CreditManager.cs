@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CreditManager : MonoBehaviour 
+public class SceneManager : MonoBehaviour 
 {
 	public GameObject m_ViejaPrefab;
 	public GameObject m_GordoPrefab;
@@ -20,10 +20,19 @@ public class CreditManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetButton("Fire1"))
+		if (Input.GetKeyDown(KeyCode.Alpha1))
 		{
 			Application.LoadLevel(0);
 		}
+		if (Input.GetKeyDown(KeyCode.Alpha2))
+		{
+			Application.LoadLevel(1);
+		}
+		if (Input.GetKeyDown(KeyCode.Alpha3))
+		{
+			Application.LoadLevel(2);
+		}
+
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
 			Application.Quit();

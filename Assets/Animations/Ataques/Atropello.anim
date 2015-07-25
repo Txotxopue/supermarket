@@ -19,25 +19,25 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 7705b84560a91fa4cb451ad9af00a2c1, type: 3}
-    - time: .0833333358
+    - time: .100000001
       value: {fileID: 21300000, guid: f8c92c7922d75604cbd0aec387c52a0b, type: 3}
-    - time: .166666672
+    - time: .200000003
       value: {fileID: 21300000, guid: 8f2e493601b554643893beedd6e4b4e3, type: 3}
-    - time: .25
+    - time: .300000012
       value: {fileID: 21300000, guid: 2d5e6ac2bca27ff4993a6267b727dfc3, type: 3}
-    - time: .333333343
+    - time: .400000006
       value: {fileID: 21300000, guid: 241ff6adbad61d14284a81a939474f11, type: 3}
-    - time: .416666657
-      value: {fileID: 21300000, guid: d02da34dc9ce32244b9f3bcde1bea9b9, type: 3}
     - time: .5
+      value: {fileID: 21300000, guid: d02da34dc9ce32244b9f3bcde1bea9b9, type: 3}
+    - time: .600000024
       value: {fileID: 21300000, guid: 1da8960dfdb58ea4480be70ad00a0bbc, type: 3}
-    - time: .583333313
+    - time: .699999988
       value: {fileID: 21300000, guid: a9fbed888a62cec469c5ccba9f2411c3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 12
+  m_SampleRate: 10
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -62,7 +62,7 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .666666627
+    m_StopTime: .800000012
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -82,7 +82,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: .583333313
+  - time: .699999988
     functionName: ShowSprites
     data: 
     objectReferenceParameter: {fileID: 0}

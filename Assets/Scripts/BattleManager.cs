@@ -200,6 +200,16 @@ public class BattleManager : MonoBehaviour
 	{
 		Instantiate(m_Galleta, transform.position,  Quaternion.identity);
 	}
+
+	public void LoadTitle()
+	{
+		Application.LoadLevel(0);
+	}
+
+	public void LoadCredit()
+	{
+		Application.LoadLevel(3);
+	}
 }
 
 
